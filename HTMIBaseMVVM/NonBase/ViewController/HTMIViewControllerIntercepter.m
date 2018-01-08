@@ -64,10 +64,10 @@
         controller.view.backgroundColor = [UIColor whiteColor];
         
         // 执行协议方法
-        [controller fk_initialDefaultsForController];
-        [controller fk_bindViewModelForController];
-        [controller fk_configNavigationForController];
-        [controller fk_createViewForConctroller];
+        [controller htmi_initialDefaultsForController];
+        [controller htmi_bindViewModelForController];
+        [controller htmi_configNavigationForController];
+        [controller htmi_createViewForConctroller];
     }
 }
 

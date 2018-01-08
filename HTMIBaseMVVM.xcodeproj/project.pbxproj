@@ -29,7 +29,7 @@
 		516D807D1FDABED60040FBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D807C1FDABED60040FBC0 /* Assets.xcassets */; };
 		516D80801FDABED60040FBC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516D807E1FDABED60040FBC0 /* LaunchScreen.storyboard */; };
 		516D80831FDABED70040FBC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80821FDABED60040FBC0 /* main.m */; };
-		516D80AA1FDC2EC30040FBC0 /* SVProgressHUD+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80A91FDC2EC30040FBC0 /* SVProgressHUD+Helper.m */; };
+		516D80AA1FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80A91FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.m */; };
 		516D80B01FDC2F770040FBC0 /* HTMIBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80AF1FDC2F770040FBC0 /* HTMIBaseRequest.m */; };
 		516D80B41FDC30FA0040FBC0 /* HTMIFunctionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80B31FDC30FA0040FBC0 /* HTMIFunctionDefine.m */; };
 		516D80B71FDC38710040FBC0 /* HTMIBaseRequest+Rac.m in Sources */ = {isa = PBXBuildFile; fileRef = 516D80B61FDC38710040FBC0 /* HTMIBaseRequest+Rac.m */; };
@@ -88,8 +88,8 @@
 		516D80811FDABED60040FBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		516D80821FDABED60040FBC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		516D80A51FDC2E3D0040FBC0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		516D80A81FDC2EC30040FBC0 /* SVProgressHUD+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+Helper.h"; sourceTree = "<group>"; };
-		516D80A91FDC2EC30040FBC0 /* SVProgressHUD+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+Helper.m"; sourceTree = "<group>"; };
+		516D80A81FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+HTMIHelper.h"; sourceTree = "<group>"; };
+		516D80A91FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+HTMIHelper.m"; sourceTree = "<group>"; };
 		516D80AE1FDC2F770040FBC0 /* HTMIBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMIBaseRequest.h; sourceTree = "<group>"; };
 		516D80AF1FDC2F770040FBC0 /* HTMIBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMIBaseRequest.m; sourceTree = "<group>"; };
 		516D80B21FDC30FA0040FBC0 /* HTMIFunctionDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMIFunctionDefine.h; sourceTree = "<group>"; };
@@ -265,8 +265,8 @@
 		516D80A61FDC2E890040FBC0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				516D80A81FDC2EC30040FBC0 /* SVProgressHUD+Helper.h */,
-				516D80A91FDC2EC30040FBC0 /* SVProgressHUD+Helper.m */,
+				516D80A81FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.h */,
+				516D80A91FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.m */,
 				51671E8B1FDD65430084B509 /* UIColor+HTMIColor.h */,
 				51671E8C1FDD65430084B509 /* UIColor+HTMIColor.m */,
 				51671E911FDD67690084B509 /* UIImage+HTMIColor.h */,
@@ -504,7 +504,7 @@
 				51671E8D1FDD65430084B509 /* UIColor+HTMIColor.m in Sources */,
 				51671EA11FDD6BBA0084B509 /* HTMILoginPwdInputTableViewCell.m in Sources */,
 				516D80C11FDC3B270040FBC0 /* JLRoutes+GenerateURL.m in Sources */,
-				516D80AA1FDC2EC30040FBC0 /* SVProgressHUD+Helper.m in Sources */,
+				516D80AA1FDC2EC30040FBC0 /* SVProgressHUD+HTMIHelper.m in Sources */,
 				516D80B41FDC30FA0040FBC0 /* HTMIFunctionDefine.m in Sources */,
 				516D80BA1FDC38FC0040FBC0 /* HTMIBaseRequestIntercepter.m in Sources */,
 				516D80C91FDC3D910040FBC0 /* UIViewController+NonBase.m in Sources */,

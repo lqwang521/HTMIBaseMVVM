@@ -15,7 +15,7 @@
 @end
 @implementation HTMILoginButton
 
-- (void)fk_createViewForView
+- (void)htmi_createViewForView
 {
     self.titleLabel.font =  [UIFont systemFontOfSize:17];
     self.layer.masksToBounds = YES;

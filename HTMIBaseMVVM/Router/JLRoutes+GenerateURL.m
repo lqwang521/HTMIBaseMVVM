@@ -19,12 +19,12 @@
 
 @implementation JLRoutes (GenerateURL)
 
-+ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters
++ (NSString *)htmi_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters
 {
-    return [[self class] fk_generateURLWithPattern:pattern parameters:parameters extraParameters:nil];
+    return [[self class] htmi_generateURLWithPattern:pattern parameters:parameters extraParameters:nil];
 }
 
-+ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters extraParameters:(NSDictionary *)extraParameters
++ (NSString *)htmi_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters extraParameters:(NSDictionary *)extraParameters
 {
     // 创建路由
     JLRRouteDefinition *route = [[JLRRouteDefinition alloc] initWithScheme:@"" pattern:pattern priority:0 handlerBlock:nil];
@@ -73,12 +73,12 @@
     if (routeValues && routeValues.count) {
         
         NSString *urlPath = [routeValues componentsJoinedByString:@"/"];
-        return [NSString stringWithFormat:@"/%@%@", urlPath, [self fk_mapDictionaryToURLQueryString:extraParameters]];
+        return [NSString stringWithFormat:@"/%@%@", urlPath, [self htmi_mapDictionaryToURLQueryString:extraParameters]];
     }
     return nil;
 }
 
-+ (NSDictionary *)fk_parseParamsWithURL:(NSURL *)URL
++ (NSDictionary *)htmi_parseParamsWithURL:(NSURL *)URL
 {
     NSString *parameterString = URL.query;
     NSMutableDictionary *parameterDic = [NSMutableDictionary new];
@@ -98,7 +98,7 @@
     return [NSDictionary dictionaryWithDictionary:parameterDic];
 }
 
-+ (NSString *)fk_mapDictionaryToURLQueryString:(NSDictionary *)dic
++ (NSString *)htmi_mapDictionaryToURLQueryString:(NSDictionary *)dic
 {
     if (!dic) {
         return @"";

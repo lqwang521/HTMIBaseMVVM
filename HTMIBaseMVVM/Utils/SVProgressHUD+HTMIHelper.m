@@ -6,24 +6,24 @@
 //  Copyright © 2017年 fkao. All rights reserved.
 //
 
-#import "SVProgressHUD+Helper.h"
+#import "SVProgressHUD+HTMIHelper.h"
 
 static const NSTimeInterval kMaxShowTime = 5.0f;
 
-@implementation SVProgressHUD (Helper)
+@implementation SVProgressHUD (HTMIHelper)
 + (void)initialize
 {
     [SVProgressHUD setMaximumDismissTimeInterval:kMaxShowTime];
 }
 
 /// 显示不带文字的overflow
-+ (void)fk_displayOverFlowActivityView
++ (void)htmi_displayOverFlowActivityView
 {
     //最多显示5s
-    [self fk_displayOverFlowActivityView:kMaxShowTime];
+    [self htmi_displayOverFlowActivityView:kMaxShowTime];
 }
 
-+ (void)fk_displayOverFlowActivityView:(NSTimeInterval)maxShowTime
++ (void)htmi_displayOverFlowActivityView:(NSTimeInterval)maxShowTime
 {
     [SVProgressHUD setMinimumDismissTimeInterval:maxShowTime];
     [SVProgressHUD show];
@@ -31,7 +31,7 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示成功状态
-+ (void)fk_displaySuccessWithStatus:(NSString *)status
++ (void)htmi_displaySuccessWithStatus:(NSString *)status
 {
     NSTimeInterval showTime = [SVProgressHUD _showTimeWithStatus:status];
     [SVProgressHUD setMinimumDismissTimeInterval:showTime];
@@ -39,7 +39,7 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示失败状态
-+ (void)fk_displayErrorWithStatus:(NSString *)status
++ (void)htmi_displayErrorWithStatus:(NSString *)status
 {
     NSTimeInterval showTime = [SVProgressHUD _showTimeWithStatus:status];
     [SVProgressHUD setMinimumDismissTimeInterval:showTime];
@@ -47,7 +47,7 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示提示信息
-+ (void)fk_dispalyInfoWithStatus:(NSString *)status
++ (void)htmi_dispalyInfoWithStatus:(NSString *)status
 {
     NSTimeInterval showTime = [SVProgressHUD _showTimeWithStatus:status];
     [SVProgressHUD setMinimumDismissTimeInterval:showTime];
@@ -55,7 +55,7 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示纯文本
-+ (void)fk_dispalyMsgWithStatus:(NSString *)status
++ (void)htmi_dispalyMsgWithStatus:(NSString *)status
 {
     //每个字0.3s, 最低3秒
     NSTimeInterval showTime = [SVProgressHUD _showTimeWithStatus:status];
@@ -64,7 +64,7 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示加载圈 加文本
-+ (void)fk_dispalyLoadingMsgWithStatus:(NSString *)status
++ (void)htmi_dispalyLoadingMsgWithStatus:(NSString *)status
 {
     //每个字0.3s, 最低3秒
     NSTimeInterval showTime = [SVProgressHUD _showTimeWithStatus:status];
@@ -73,14 +73,14 @@ static const NSTimeInterval kMaxShowTime = 5.0f;
 }
 
 /// 显示进度，带文本
-+ (void)fk_dispalyProgress:(CGFloat)progress status:(NSString *)status
++ (void)htmi_dispalyProgress:(CGFloat)progress status:(NSString *)status
 {
     [SVProgressHUD setMinimumDismissTimeInterval:kMaxShowTime];
     [SVProgressHUD showProgress:progress status:status];
 }
 
 /// 显示进度，不带文本
-+ (void)fk_dispalyProgress:(CGFloat)progress
++ (void)htmi_dispalyProgress:(CGFloat)progress
 {
     [SVProgressHUD setMinimumDismissTimeInterval:kMaxShowTime];
     [SVProgressHUD showProgress:progress];

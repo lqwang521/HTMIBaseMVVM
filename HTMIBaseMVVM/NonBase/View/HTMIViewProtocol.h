@@ -23,11 +23,11 @@
 /**
  初始化额外数据
  */
-- (void)fk_initializeForView;
+- (void)htmi_initializeForView;
 
 /**
  初始化视图
  */
-- (void)fk_createViewForView;
+- (void)htmi_createViewForView;
 
 @end

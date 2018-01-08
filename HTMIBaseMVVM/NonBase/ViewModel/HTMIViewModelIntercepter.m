@@ -46,15 +46,15 @@
 #pragma mark - Hook Methods
 - (void)_initWithInstance:(NSObject <HTMIViewModelProtocol> *)viewModel
 {
-    if ([viewModel respondsToSelector:@selector(fk_initializeForViewModel)]) {
-        [viewModel fk_initializeForViewModel];
+    if ([viewModel respondsToSelector:@selector(htmi_initializeForViewModel)]) {
+        [viewModel htmi_initializeForViewModel];
     }
 }
 
 - (void)_initWithInstance:(NSObject <HTMIViewModelProtocol> *)viewModel params:(NSDictionary *)param
 {
-    if ([viewModel respondsToSelector:@selector(fk_initializeForViewModel)]) {
-        [viewModel fk_initializeForViewModel];
+    if ([viewModel respondsToSelector:@selector(htmi_initializeForViewModel)]) {
+        [viewModel htmi_initializeForViewModel];
     }
 }
 

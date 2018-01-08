@@ -60,26 +60,26 @@
 - (void)_init:(UIView <HTMIViewProtocol>*)view withFrame:(CGRect)frame
 {
     
-    if ([view respondsToSelector:@selector(fk_initializeForView)]) {
-        [view fk_initializeForView];
+    if ([view respondsToSelector:@selector(htmi_initializeForView)]) {
+        [view htmi_initializeForView];
     }
     
-    if ([view respondsToSelector:@selector(fk_createViewForView)]) {
-        [view fk_createViewForView];
+    if ([view respondsToSelector:@selector(htmi_createViewForView)]) {
+        [view htmi_createViewForView];
     }
 }
 
 - (void)_init:(UIView <HTMIViewProtocol>*)view withCoder:(NSCoder *)aDecoder
 {
-    if ([view respondsToSelector:@selector(fk_initializeForView)]) {
-        [view fk_initializeForView];
+    if ([view respondsToSelector:@selector(htmi_initializeForView)]) {
+        [view htmi_initializeForView];
     }
 }
 
 - (void)_awakFromNib:(UIView <HTMIViewProtocol>*)view
 {
-    if ([view respondsToSelector:@selector(fk_createViewForView)]) {
-        [view fk_createViewForView];
+    if ([view respondsToSelector:@selector(htmi_createViewForView)]) {
+        [view htmi_createViewForView];
     }
 }
 

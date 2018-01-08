@@ -19,7 +19,7 @@
     // Initialization code
 }
 
-- (void)fk_createViewForView
+- (void)htmi_createViewForView
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.accessoryType = UITableViewCellAccessoryNone;

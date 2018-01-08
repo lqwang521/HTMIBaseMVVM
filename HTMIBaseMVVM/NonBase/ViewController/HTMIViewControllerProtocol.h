@@ -17,15 +17,15 @@
 #pragma mark - 方法绑定
 @required
 /// 初始化数据
-- (void)fk_initialDefaultsForController;
+- (void)htmi_initialDefaultsForController;
 
 /// 绑定 vm
-- (void)fk_bindViewModelForController;
+- (void)htmi_bindViewModelForController;
 
 /// 创建视图
-- (void)fk_createViewForConctroller;
+- (void)htmi_createViewForConctroller;
 
 /// 配置导航栏
-- (void)fk_configNavigationForController;
+- (void)htmi_configNavigationForController;
 
 @end

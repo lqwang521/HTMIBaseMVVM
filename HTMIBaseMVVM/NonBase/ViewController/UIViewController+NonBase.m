@@ -39,12 +39,12 @@ static const void *kViewModelKey = &kViewModelKey;
 {
     [super touchesBegan:touches withEvent:event];
     // 点击隐藏键盘
-    [self fk_hideKeyBoard];
+    [self htmi_hideKeyBoard];
 }
 
 #pragma mark - 通用类
 
-- (CGRect)fk_visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar
+- (CGRect)htmi_visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar
 {
     CGRect frame = [[UIScreen mainScreen] bounds];
     
@@ -88,7 +88,7 @@ static const void *kViewModelKey = &kViewModelKey;
     return frame;
 }
 
-- (void)fk_hideKeyBoard
+- (void)htmi_hideKeyBoard
 {
     // 遍历所有子视图
     [self _traverseAllSubviewsToResignFirstResponder:self.view];

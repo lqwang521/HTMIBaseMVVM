@@ -16,7 +16,7 @@
 
 #ifdef __OBJC__
     // 提示组件
-    #import "SVProgressHUD+Helper.h"
+    #import "SVProgressHUD+HTMIHelper.h"
     // 全局定义
     #import "HTMIFunctionDefine.h"
     #import "HTMIGlobalDefine.h"

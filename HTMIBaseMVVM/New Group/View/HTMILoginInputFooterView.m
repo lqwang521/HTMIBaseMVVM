@@ -10,7 +10,7 @@
 
 @implementation HTMILoginInputFooterView
 
-- (void)fk_createViewForView
+- (void)htmi_createViewForView
 {
     [self addSubview:self.loginBtn];
     [self addSubview:self.queryBtn];

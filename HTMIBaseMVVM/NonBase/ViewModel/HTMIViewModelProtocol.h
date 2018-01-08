@@ -15,6 +15,6 @@
 /**
  viewModel 初始化属性
  */
-- (void)fk_initializeForViewModel;
+- (void)htmi_initializeForViewModel;
 
 @end

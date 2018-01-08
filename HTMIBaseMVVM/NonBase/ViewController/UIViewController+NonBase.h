@@ -30,11 +30,11 @@
  @param hasTabBar 是否有tabbar
  @return 坐标
  */
-- (CGRect)fk_visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar;
+- (CGRect)htmi_visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar;
 
 /**
  隐藏键盘
  */
-- (void)fk_hideKeyBoard;
+- (void)htmi_hideKeyBoard;
 
 @end

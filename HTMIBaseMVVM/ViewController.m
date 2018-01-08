@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "SVProgressHUD+Helper.h"
+#import "SVProgressHUD+HTMIHelper.h"
 
 @interface ViewController ()
 
@@ -32,6 +32,8 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setupViews];
+    [self setupConstrains];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,29 +41,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fk_initialDefaultsForController
+- (void)htmi_initialDefaultsForController
 {
     
 }
 
-- (void)fk_configNavigationForController
+- (void)htmi_configNavigationForController
 {
     
 }
 
-- (void)fk_createViewForConctroller
+- (void)setupViews
 {
     [self.view addSubview:self.logoutBtn];
     [self.view addSubview:self.pushBtn];
+}
+
+- (void)setupConstrains {
+    NSArray *views = @[self.pushBtn, self.logoutBtn];
+    CGFloat offset = SCREEN_HEIGHT/3;
+    
+    [views mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedItemLength:40 leadSpacing:offset tailSpacing:offset];
+    
+    [views mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.mas_equalTo(self.view);
+    }];
     
 }
 
--(void)fk_bindViewModelForController
+-(void)htmi_bindViewModelForController
 {
     [[self.logoutBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
         [[NSUserDefaults standardUserDefaults] setObject:@(NO) forKey:@"isLogin"];
-        [SVProgressHUD fk_dispalyMsgWithStatus:@"2秒后将退出登录"];
+        [SVProgressHUD htmi_dispalyMsgWithStatus:@"2秒后将退出登录"];
         [SVProgressHUD dismissWithDelay:2.0f completion:^{
             [[NSNotificationCenter defaultCenter] postNotificationName:HTMILoginStateChangedNotificationKey object:nil];
         }];
@@ -70,28 +84,12 @@
     // push
     [[self.pushBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
-        NSString *router = [JLRoutes fk_generateURLWithPattern:HTMINavPushRoute parameters:@[NSStringFromClass(ViewController.class)] extraParameters:nil];
+        NSString *router = [JLRoutes htmi_generateURLWithPattern:HTMINavPushRoute parameters:@[NSStringFromClass(ViewController.class)] extraParameters:nil];
         [[RACScheduler mainThreadScheduler] schedule:^{
             
             [[UIApplication sharedApplication] openURL:JLRGenRouteURL(HTMIDefaultRouteSchema, router)];
         }];
     }];
-}
-
-#pragma mark - Layout
-- (void)updateViewConstraints
-{
-    NSArray *views = @[self.pushBtn, self.logoutBtn];
-    CGFloat offset = SCREEN_HEIGHT/3;
-    
-    [views mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedItemLength:40 leadSpacing:offset tailSpacing:offset];
-    
-    [views mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.centerX.mas_equalTo(self.view);
-    }];
-    
-    [super updateViewConstraints];
 }
 
 #pragma mark - Getter

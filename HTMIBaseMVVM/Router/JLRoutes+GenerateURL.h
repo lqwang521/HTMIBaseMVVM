@@ -30,7 +30,7 @@ JLRGenRoute(Schema, path)])
  @param parameters 附带参数
  @return URL字符串
  */
-+ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters;
++ (NSString *)htmi_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters;
 
 /**
  避免 URL 散落各处， 集中生成URL
@@ -41,7 +41,7 @@ JLRGenRoute(Schema, path)])
  @param extraParameters 额外参数
  @return URL字符串
  */
-+ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters extraParameters:(NSDictionary *)extraParameters;
++ (NSString *)htmi_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters extraParameters:(NSDictionary *)extraParameters;
 
 /**
  解析NSURL对象中的请求参数
@@ -49,7 +49,7 @@ JLRGenRoute(Schema, path)])
  @param URL NSURL对象
  @return URL字符串
  */
-+ (NSDictionary *)fk_parseParamsWithURL:(NSURL *)URL;
++ (NSDictionary *)htmi_parseParamsWithURL:(NSURL *)URL;
 
 /**
  将参数对象进行url编码
@@ -57,7 +57,7 @@ JLRGenRoute(Schema, path)])
  @param dic 参数对象
  @return URL字符串
  */
-+ (NSString *)fk_mapDictionaryToURLQueryString:(NSDictionary *)dic;
++ (NSString *)htmi_mapDictionaryToURLQueryString:(NSDictionary *)dic;
 
 
 @end

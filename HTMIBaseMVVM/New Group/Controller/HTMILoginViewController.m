@@ -59,18 +59,18 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fk_initialDefaultsForController
+- (void)htmi_initialDefaultsForController
 {
     [self setViewModel:[[HTMILoginViewModel alloc] initWithParams:self.params]];
 
 }
 
-- (void)fk_configNavigationForController
+- (void)htmi_configNavigationForController
 {
     
 }
 
-- (void)fk_createViewForConctroller
+- (void)htmi_createViewForConctroller
 {
     // config tableView
     _loginInputTableView.delegate = self;
@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
     _loginInputTableView.tableFooterView = self.tableFooterView;
 }
 
--(void)fk_bindViewModelForController
+-(void)htmi_bindViewModelForController
 {
     @weakify(self);
 
@@ -101,7 +101,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
         @strongify(self);
         
         [self.viewModel.loginCommand execute:nil];
-        [self fk_hideKeyBoard];
+        [self htmi_hideKeyBoard];
     }];
     
     // 监听登录信号是否在执行
@@ -126,7 +126,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
             
             BOOL isLogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"];
             if(isLogin){
-                [SVProgressHUD fk_displaySuccessWithStatus:@"登录成功"];
+                [SVProgressHUD htmi_displaySuccessWithStatus:@"登录成功"];
                 
                 // 2s后进入首页
                 [SVProgressHUD dismissWithDelay:2.0f completion:^{
@@ -134,11 +134,11 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
                 }];
             }else
             {
-                [SVProgressHUD fk_displaySuccessWithStatus:@"登录失败"];
+                [SVProgressHUD htmi_displaySuccessWithStatus:@"登录失败"];
             }
         } error:^(NSError * _Nullable error) {
             
-            [SVProgressHUD fk_displayErrorWithStatus:error.localizedDescription];
+            [SVProgressHUD htmi_displayErrorWithStatus:error.localizedDescription];
         }];
     }];
 }
